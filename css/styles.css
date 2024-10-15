@@ -1,0 +1,70 @@
+body {
+    background-color: #1b1b1b;
+    color: #f1f1f1;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  .navbar-dark.bg-dark {
+    background-color: #000 !important;
+  }
+  
+  .navbar-brand img {
+    max-width: 80px;
+  }
+  
+  .section-title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #107C10;
+    margin-bottom: 20px;
+  }
+  
+  .game-card {
+    background-color: #262626;
+    border-radius: 10px;
+    border: 1px solid #333;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .game-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+  }
+  
+  .game-card img {
+    border-radius: 10px 10px 0 0;
+    height: 200px;
+    object-fit: cover;
+  }
+  
+  .game-card-body {
+    padding: 15px;
+  }
+  
+  .game-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #fff;
+  }
+  
+  .game-price {
+    color: #fff;
+    font-size: 1rem;
+    margin-bottom: 10px;
+  }
+  
+  .game-price del {
+    color: #ff6a00;
+  }
+  
+  .btn-success {
+    background-color: #107C10;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+  }
+  
+  .btn-success:hover {
+    background-color: #0f6610;
+  }
+  

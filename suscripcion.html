@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>eShop - Suscripción</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container-fluid justify-content-center">
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav mx-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="tienda.html">Tienda</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Suscripción</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="perfil.html">Mi Perfil</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container mt-5">
+      <section id="suscripcion">
+        <h2 class="section-title">Plan de Suscripción Mensual</h2>
+        <p class="lead">Con nuestra suscripción mensual, tendrás acceso a:</p>
+        <ul class="list-group mb-4">
+          <li class="list-group-item">Acceso anticipado a los últimos lanzamientos</li>
+          <li class="list-group-item">Juegos gratuitos cada mes</li>
+          <li class="list-group-item">Descuentos exclusivos en juegos y complementos</li>
+        </ul>
+
+        <div class="row justify-content-center">
+          <div class="col-md-4 text-center mb-3">
+            <button class="btn btn-success btn-lg w-100" id="btnSuscribirse">Suscribirse</button>
+          </div>
+
+          <div class="col-md-4 text-center mb-3">
+            <button class="btn btn-primary btn-lg w-100" id="btnGestionarSuscripcion">
+              Gestionar Suscripción
+            </button>
+          </div>
+
+          <div class="col-md-4 text-center mb-3">
+            <button class="btn btn-secondary btn-lg w-100" id="btnVerHistorialPagos">
+              Historial de Pagos
+            </button>
+          </div>
+        </div>
+
+        <div class="mt-5">
+          <h4>Recibo de Suscripción</h4>
+          <p id="recibo-texto" class="d-none">
+            Gracias por suscribirte al plan mensual. Tu recibo ha sido generado.
+          </p>
+        </div>
+      </section>
+    </div>
+
+    <footer class="bg-dark text-light text-center py-3 mt-5">
+      <p>&copy; 2024 eShop. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="suscripcion.js"></script>
+  </body>
+</html>

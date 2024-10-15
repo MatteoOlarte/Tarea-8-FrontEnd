@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>eShop - Inicio</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container-fluid justify-content-center">
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav mx-auto">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="tienda.html">Tienda</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="suscripcion.html">Suscripción</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="perfil.html">Mi Perfil</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container mt-5">
+      <section id="nuevos-lanzamientos">
+        <h2 class="section-title">Nuevos lanzamientos</h2>
+        <div class="row">
+          <div class="col-md-3">
+            <div
+              class="game-card product"
+              data-id="1"
+              data-name="Horizon Forbidden West"
+              data-price="211000"
+            >
+              <img src="img/game10.jpg" class="card-img-top" alt="Juego Nuevo 1" />
+              <div class="game-card-body">
+                <h5 class="game-title">Horizon Forbidden West</h5>
+                <p class="game-price">$211,000 COP</p>
+                <button class="btn btn-success add-to-cart">Comprar</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="game-card">
+              <img src="img/game19.jpg" class="card-img-top" alt="Juego Nuevo 2" />
+              <div class="game-card-body">
+                <h5 class="game-title">SILENT HILL 2</h5>
+                <p class="game-price">$296,000 COP</p>
+                <a href="#" class="btn btn-success">Comprar</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="game-card">
+              <img src="img/game1.jpg" class="card-img-top" alt="Juego Nuevo 3" />
+              <div class="game-card-body">
+                <h5 class="game-title">Black Myth: Wukong</h5>
+                <p class="game-price">$199,000 COP</p>
+                <a href="#" class="btn btn-success">Comprar</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="game-card">
+              <img src="img/game6.jpg" class="card-img-top" alt="Juego Nuevo 4" />
+              <div class="game-card-body">
+                <h5 class="game-title">FINAL FANTASY XVI</h5>
+                <p class="game-price">$170,000 COP</p>
+                <a href="#" class="btn btn-success">Comprar</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="los-mas-vendidos" class="mt-5">
+        <h2 class="section-title">Los más vendidos</h2>
+        <div class="row">
+          <div class="col-md-3">
+            <div class="game-card">
+              <img src="img/game7.jpg" class="card-img-top" alt="Juego Más Vendido 1" />
+              <div class="game-card-body">
+                <h5 class="game-title">Grand Theft Auto V</h5>
+                <p class="game-price">$139,900 COP</p>
+                <a href="#" class="btn btn-success">Comprar</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="game-card">
+              <img src="img/game11.jpg" class="card-img-top" alt="Juego Más Vendido 2" />
+              <div class="game-card-body">
+                <h5 class="game-title">Mario Kart 8 Deluxe</h5>
+                <p class="game-price">$279,000 COP</p>
+                <a href="#" class="btn btn-success">Comprar</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="game-card">
+              <img src="img/game13.jpg" class="card-img-top" alt="Juego Más Vendido 3" />
+              <div class="game-card-body">
+                <h5 class="game-title">Minecraft</h5>
+                <p class="game-price">$126,000 COP</p>
+                <a href="#" class="btn btn-success">Comprar</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="game-card">
+              <img src="img/game16.jpg" class="card-img-top" alt="Juego Más Vendido 4" />
+              <div class="game-card-body">
+                <h5 class="game-title">Red Dead Redemption 2</h5>
+                <p class="game-price">$239,000 COP</p>
+                <a href="#" class="btn btn-success">Comprar</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="juegos-promocion" class="mt-5">
+        <h2 class="section-title">Juegos en promoción</h2>
+        <div class="row">
+          <div class="col-md-3">
+            <div class="game-card">
+              <img src="img/game4.jpg" class="card-img-top" alt="Juego en Promoción 1" />
+              <div class="game-card-body">
+                <h5 class="game-title">Detroit: Become Human</h5>
+                <p class="game-price">$38,900 COP <del>$129,900 COP</del></p>
+                <a href="#" class="btn btn-success">Comprar</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="game-card">
+              <img src="img/game20.jpg" class="card-img-top" alt="Juego en Promoción 2" />
+              <div class="game-card-body">
+                <h5 class="game-title">The Last of Us Part I</h5>
+                <p class="game-price">$130,900 COP <del>$219,000 COP</del></p>
+                <a href="#" class="btn btn-success">Comprar</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="game-card">
+              <img src="img/game8.jpg" class="card-img-top" alt="Juego en Promoción 3" />
+              <div class="game-card-body">
+                <h5 class="game-title">Hogwarts Legacy</h5>
+                <p class="game-price">$56,900 COP <del>$189,900 COP</del></p>
+                <a href="#" class="btn btn-success">Comprar</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="game-card">
+              <img src="img/game17.jpg" class="card-img-top" alt="Juego en Promoción 4" />
+              <div class="game-card-body">
+                <h5 class="game-title">Resident Evil 4</h5>
+                <p class="game-price">$114,900 COP <del>$229,000 COP</del></p>
+                <a href="#" class="btn btn-success">Comprar</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <footer class="bg-dark text-light text-center py-3 mt-5">
+      <p>&copy; 2024 eShop. All rights reserved.</p>
+    </footer>
+
+    <script src="js/carrito.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
