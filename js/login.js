@@ -1,5 +1,5 @@
 "use strict";
-const APIurl = "http://127.0.0.1:8000";
+const APIurl = "https://webapp-eastus-programacionweb-2024-2-gafjg4acc2csdggn.eastus-01.azurewebsites.net";
 const signInForm = document.getElementById("signin-form");
 const signUpForm = document.getElementById("signup-form");
 
