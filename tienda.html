@@ -48,7 +48,6 @@
               <option selected>Elige un género...</option>
               <option value="accion">Acción</option>
               <option value="aventura">Aventura</option>
-              <option value="estrategia">Estrategia</option>
               <option value="deportes">Deportes</option>
               <option value="simulacion">Simulación</option>
             </select>
@@ -69,11 +68,11 @@
             <label for="filtro-popularidad" class="form-label">Popularidad</label>
             <select id="filtro-popularidad" class="form-select">
               <option selected>Elige una opción...</option>
-              <option value="mas-vendidos">Más vendidos</option>
-              <option value="mejor-valorados">Mejor valorados</option>
-              <option value="recientes">Lanzamientos recientes</option>
+              <option value="nuevos-lanzamientos">Nuevos lanzamientos</option>
+              <option value="mas-vendidos">Los más vendidos</option>
+              <option value="promocion">Juegos en promoción</option>
             </select>
-          </div>
+          </div>          
 
           <div class="col-12 text-center mt-3">
             <button type="submit" class="btn btn-success">Aplicar Filtros</button>
@@ -81,312 +80,244 @@
         </form>
       </section>
 
-      <section id="lista-juegos">
-        <div class="row justify-content-center products">
-          <div class="col-md-3">
-            <div
-              class="game-card product"
-              data-id="1"
-              data-name="Black Myth: Wukong"
-              data-price="199000"
-            >
-              <img src="img/game1.jpg" class="card-img-top" alt="Juego 1" />
-              <div class="game-card-body">
-                <h5 class="game-title">Black Myth: Wukong</h5>
-                <p class="game-price">$199,000 COP</p>
-                <button class="btn btn-success add-to-cart">Agregar al Carrito</button>
-              </div>
-            </div>
-          </div>
+      <div class="container mt-5">
+        <section id="lista-juegos">
+          <div class="row justify-content-center products">
 
-          <div class="col-md-3">
-            <div class="game-card product" data-id="2" data-name="Celeste" data-price="47500">
-              <img src="img/game2.jpg" class="card-img-top" alt="Juego 2" />
-              <div class="game-card-body">
-                <h5 class="game-title">Celeste</h5>
-                <p class="game-price">$47,500 COP</p>
-                <button class="btn btn-success add-to-cart">Agregar al Carrito</button>
+            <div class="col-md-3">
+              <div id="juego-black-myth" class="game-card product" data-id="1" data-name="Black Myth: Wukong" data-price="199000">
+                <img src="img/game1.jpg" class="card-img-top" alt="Black Myth: Wukong" />
+                <div class="game-card-body">
+                  <h5 class="game-title">Black Myth: Wukong</h5>
+                  <p class="game-price">$199,000 COP</p>
+                  <button class="btn btn-success add-to-cart">Agregar al Carrito</button>
+                </div>
               </div>
             </div>
-          </div>
 
-          <div class="col-md-3">
-            <div class="game-card product" data-id="3" data-name="Cuphead" data-price="40000">
-              <img src="img/game3.jpg" class="card-img-top" alt="Juego 3" />
-              <div class="game-card-body">
-                <h5 class="game-title">Cuphead</h5>
-                <p class="game-price">$40,000 COP</p>
-                <button class="btn btn-success add-to-cart">Agregar al Carrito</button>
+            <div class="col-md-3">
+              <div id="juego-celeste" class="game-card product" data-id="2" data-name="Celeste" data-price="47500">
+                <img src="img/game2.jpg" class="card-img-top" alt="Celeste" />
+                <div class="game-card-body">
+                  <h5 class="game-title">Celeste</h5>
+                  <p class="game-price">$47,500 COP</p>
+                  <button class="btn btn-success add-to-cart">Agregar al Carrito</button>
+                </div>
               </div>
             </div>
-          </div>
 
-          <div class="col-md-3">
-            <div
-              class="game-card product"
-              data-id="4"
-              data-name="Detroit: Become Human"
-              data-price="38900"
-            >
-              <img src="img/game4.jpg" class="card-img-top" alt="Juego 4" />
-              <div class="game-card-body">
-                <h5 class="game-title">Detroit: Become Human</h5>
-                <p class="game-price">$38,900 COP <del>$129,900 COP</del></p>
-                <button class="btn btn-success add-to-cart">Agregar al Carrito</button>
+            <div class="col-md-3">
+              <div id="juego-cuphead" class="game-card product" data-id="3" data-name="Cuphead" data-price="40000">
+                <img src="img/game3.jpg" class="card-img-top" alt="Cuphead" />
+                <div class="game-card-body">
+                  <h5 class="game-title">Cuphead</h5>
+                  <p class="game-price">$40,000 COP</p>
+                  <button class="btn btn-success add-to-cart">Agregar al Carrito</button>
+                </div>
               </div>
             </div>
-          </div>
-        </div>
 
-        <div class="row justify-content-center mt-4">
-          <div class="col-md-3">
-            <div class="game-card product" data-id="5" data-name="ELDEN RING" data-price="199900">
-              <img src="img/game5.jpg" class="card-img-top" alt="Juego 5" />
-              <div class="game-card-body">
-                <h5 class="game-title">ELDEN RING</h5>
-                <p class="game-price">$199,900 COP</p>
-                <button class="btn btn-success add-to-cart">Agregar al Carrito</button>
+            <div class="col-md-3">
+              <div id="juego-detroit-become-human" class="game-card product" data-id="4" data-name="Detroit: Become Human" data-price="38900">
+                <img src="img/game4.jpg" class="card-img-top" alt="Detroit: Become Human" />
+                <div class="game-card-body">
+                  <h5 class="game-title">Detroit: Become Human</h5>
+                  <p class="game-price">$38,900 COP <del>$129,900 COP</del></p>
+                  <button class="btn btn-success add-to-cart">Agregar al Carrito</button>
+                </div>
               </div>
             </div>
           </div>
+      
+          <div class="row justify-content-center mt-4">
 
-          <div class="col-md-3">
-            <div
-              class="game-card product"
-              data-id="6"
-              data-name="FINAL FANTASY XVI"
-              data-price="170000"
-            >
-              <img src="img/game6.jpg" class="card-img-top" alt="Juego 6" />
-              <div class="game-card-body">
-                <h5 class="game-title">FINAL FANTASY XVI</h5>
-                <p class="game-price">$170,000 COP</p>
-                <button class="btn btn-success add-to-cart">Agregar al Carrito</button>
+            <div class="col-md-3">
+              <div id="juego-elden-ring" class="game-card product" data-id="5" data-name="ELDEN RING" data-price="199900">
+                <img src="img/game5.jpg" class="card-img-top" alt="ELDEN RING" />
+                <div class="game-card-body">
+                  <h5 class="game-title">ELDEN RING</h5>
+                  <p class="game-price">$199,900 COP</p>
+                  <button class="btn btn-success add-to-cart">Agregar al Carrito</button>
+                </div>
               </div>
             </div>
-          </div>
 
-          <div class="col-md-3">
-            <div
-              class="game-card product"
-              data-id="7"
-              data-name="Grand Theft Auto V"
-              data-price="139900"
-            >
-              <img src="img/game7.jpg" class="card-img-top" alt="Juego 7" />
-              <div class="game-card-body">
-                <h5 class="game-title">Grand Theft Auto V</h5>
-                <p class="game-price">$139,900 COP</p>
-                <button class="btn btn-success add-to-cart">Agregar al Carrito</button>
+            <div class="col-md-3">
+              <div id="juego-final-fantasy-xvi" class="game-card product" data-id="6" data-name="FINAL FANTASY XVI" data-price="170000">
+                <img src="img/game6.jpg" class="card-img-top" alt="FINAL FANTASY XVI" />
+                <div class="game-card-body">
+                  <h5 class="game-title">FINAL FANTASY XVI</h5>
+                  <p class="game-price">$170,000 COP</p>
+                  <button class="btn btn-success add-to-cart">Agregar al Carrito</button>
+                </div>
               </div>
             </div>
-          </div>
 
-          <div class="col-md-3">
-            <div
-              class="game-card product"
-              data-id="8"
-              data-name="Hogwarts Legacy"
-              data-price="56900"
-            >
-              <img src="img/game8.jpg" class="card-img-top" alt="Juego 8" />
-              <div class="game-card-body">
-                <h5 class="game-title">Hogwarts Legacy</h5>
-                <p class="game-price">$56,900 COP <del>$189,900 COP</del></p>
-                <button class="btn btn-success add-to-cart">Agregar al Carrito</button>
+            <div class="col-md-3">
+              <div id="juego-gta-v" class="game-card product" data-id="7" data-name="Grand Theft Auto V" data-price="139900">
+                <img src="img/game7.jpg" class="card-img-top" alt="Grand Theft Auto V" />
+                <div class="game-card-body">
+                  <h5 class="game-title">Grand Theft Auto V</h5>
+                  <p class="game-price">$139,900 COP</p>
+                  <button class="btn btn-success add-to-cart">Agregar al Carrito</button>
+                </div>
               </div>
             </div>
-          </div>
-        </div>
 
-        <div class="row justify-content-center mt-4">
-          <div class="col-md-3">
-            <div class="game-card product" data-id="9" data-name="Hollow Knight" data-price="37500">
-              <img src="img/game9.jpg" class="card-img-top" alt="Juego 9" />
-              <div class="game-card-body">
-                <h5 class="game-title">Hollow Knight</h5>
-                <p class="game-price">$37,500 COP</p>
-                <button class="btn btn-success add-to-cart">Agregar al Carrito</button>
+            <div class="col-md-3">
+              <div id="juego-hogwarts-legacy" class="game-card product" data-id="8" data-name="Hogwarts Legacy" data-price="56900">
+                <img src="img/game8.jpg" class="card-img-top" alt="Hogwarts Legacy" />
+                <div class="game-card-body">
+                  <h5 class="game-title">Hogwarts Legacy</h5>
+                  <p class="game-price">$56,900 COP <del>$189,900 COP</del></p>
+                  <button class="btn btn-success add-to-cart">Agregar al Carrito</button>
+                </div>
               </div>
             </div>
           </div>
+      
+          <div class="row justify-content-center mt-4">
 
-          <div class="col-md-3">
-            <div
-              class="game-card product"
-              data-id="10"
-              data-name="Horizon Forbidden West"
-              data-price="211000"
-            >
-              <img src="img/game10.jpg" class="card-img-top" alt="Juego 10" />
-              <div class="game-card-body">
-                <h5 class="game-title">Horizon Forbidden West</h5>
-                <p class="game-price">$211,000 COP</p>
-                <button class="btn btn-success add-to-cart">Agregar al Carrito</button>
+            <div class="col-md-3">
+              <div id="juego-horizon-forbidden-west" class="game-card product" data-id="10" data-name="Horizon Forbidden West" data-price="211000">
+                <img src="img/game10.jpg" class="card-img-top" alt="Horizon Forbidden West" />
+                <div class="game-card-body">
+                  <h5 class="game-title">Horizon Forbidden West</h5>
+                  <p class="game-price">$211,000 COP</p>
+                  <button class="btn btn-success add-to-cart">Agregar al Carrito</button>
+                </div>
               </div>
             </div>
-          </div>
 
-          <div class="col-md-3">
-            <div
-              class="game-card product"
-              data-id="11"
-              data-name="Mario Kart 8 Deluxe"
-              data-price="279000"
-            >
-              <img src="img/game11.jpg" class="card-img-top" alt="Juego 11" />
-              <div class="game-card-body">
-                <h5 class="game-title">Mario Kart 8 Deluxe</h5>
-                <p class="game-price">$279,000 COP</p>
-                <button class="btn btn-success add-to-cart">Agregar al Carrito</button>
+            <div class="col-md-3">
+              <div id="juego-mario-kart-8" class="game-card product" data-id="11" data-name="Mario Kart 8 Deluxe" data-price="279000">
+                <img src="img/game11.jpg" class="card-img-top" alt="Mario Kart 8 Deluxe" />
+                <div class="game-card-body">
+                  <h5 class="game-title">Mario Kart 8 Deluxe</h5>
+                  <p class="game-price">$279,000 COP</p>
+                  <button class="btn btn-success add-to-cart">Agregar al Carrito</button>
+                </div>
               </div>
             </div>
-          </div>
 
-          <div class="col-md-3">
-            <div
-              class="game-card product"
-              data-id="12"
-              data-name="Marvel’s Spider-Man Remastered"
-              data-price="219000"
-            >
-              <img src="img/game12.jpg" class="card-img-top" alt="Juego 12" />
-              <div class="game-card-body">
-                <h5 class="game-title">Marvel’s Spider-Man Remastered</h5>
-                <p class="game-price">$219,000 COP</p>
-                <button class="btn btn-success add-to-cart">Agregar al Carrito</button>
+            <div class="col-md-3">
+              <div id="juego-minecraft" class="game-card product" data-id="13" data-name="Minecraft" data-price="126000">
+                <img src="img/game13.jpg" class="card-img-top" alt="Minecraft" />
+                <div class="game-card-body">
+                  <h5 class="game-title">Minecraft</h5>
+                  <p class="game-price">$126,000 COP</p>
+                  <button class="btn btn-success add-to-cart">Agregar al Carrito</button>
+                </div>
               </div>
             </div>
-          </div>
-        </div>
 
-        <div class="row justify-content-center mt-4">
-          <div class="col-md-3">
-            <div class="game-card product" data-id="13" data-name="Minecraft" data-price="126000">
-              <img src="img/game13.jpg" class="card-img-top" alt="Juego 13" />
-              <div class="game-card-body">
-                <h5 class="game-title">Minecraft</h5>
-                <p class="game-price">$126,000 COP</p>
-                <button class="btn btn-success add-to-cart">Agregar al Carrito</button>
+            <div class="col-md-3">
+              <div id="juego-red-dead-redemption-2" class="game-card product" data-id="16" data-name="Red Dead Redemption 2" data-price="239000">
+                <img src="img/game16.jpg" class="card-img-top" alt="Red Dead Redemption 2" />
+                <div class="game-card-body">
+                  <h5 class="game-title">Red Dead Redemption 2</h5>
+                  <p class="game-price">$239,000 COP</p>
+                  <button class="btn btn-success add-to-cart">Agregar al Carrito</button>
+                </div>
               </div>
             </div>
           </div>
+      
+          <div class="row justify-content-center mt-4">
 
-          <div class="col-md-3">
-            <div
-              class="game-card product"
-              data-id="14"
-              data-name="Need for Speed Unbound"
-              data-price="279900"
-            >
-              <img src="img/game14.jpg" class="card-img-top" alt="Juego 14" />
-              <div class="game-card-body">
-                <h5 class="game-title">Need for Speed Unbound</h5>
-                <p class="game-price">$279,900 COP</p>
-                <button class="btn btn-success add-to-cart">Agregar al Carrito</button>
+            <div class="col-md-3">
+              <div id="juego-resident-evil-4" class="game-card product" data-id="17" data-name="Resident Evil 4" data-price="114900">
+                <img src="img/game17.jpg" class="card-img-top" alt="Resident Evil 4" />
+                <div class="game-card-body">
+                  <h5 class="game-title">Resident Evil 4</h5>
+                  <p class="game-price">$114,900 COP <del>$229,000 COP</del></p>
+                  <button class="btn btn-success add-to-cart">Agregar al Carrito</button>
+                </div>
               </div>
             </div>
-          </div>
 
-          <div class="col-md-3">
-            <div
-              class="game-card product"
-              data-id="15"
-              data-name="NieR:Automata"
-              data-price="124000"
-            >
-              <img src="img/game15.jpg" class="card-img-top" alt="Juego 15" />
-              <div class="game-card-body">
-                <h5 class="game-title">NieR:Automata</h5>
-                <p class="game-price">$124,000 COP</p>
-                <button class="btn btn-success add-to-cart">Agregar al Carrito</button>
+            <div class="col-md-3">
+              <div id="juego-the-last-of-us-part-i" class="game-card product" data-id="20" data-name="The Last of Us Part I" data-price="130900">
+                <img src="img/game20.jpg" class="card-img-top" alt="The Last of Us Part I" />
+                <div class="game-card-body">
+                  <h5 class="game-title">The Last of Us Part I</h5>
+                  <p class="game-price">$130,900 COP <del>$219,000 COP</del></p>
+                  <button class="btn btn-success add-to-cart">Agregar al Carrito</button>
+                </div>
               </div>
             </div>
-          </div>
 
-          <div class="col-md-3">
-            <div
-              class="game-card product"
-              data-id="16"
-              data-name="Red Dead Redemption 2"
-              data-price="239000"
-            >
-              <img src="img/game16.jpg" class="card-img-top" alt="Juego 16" />
-              <div class="game-card-body">
-                <h5 class="game-title">Red Dead Redemption 2</h5>
-                <p class="game-price">$239,000 COP</p>
-                <button class="btn btn-success add-to-cart">Agregar al Carrito</button>
+            <div class="col-md-3">
+              <div id="juego-silent-hill-2" class="game-card product" data-id="19" data-name="SILENT HILL 2" data-price="296000">
+                <img src="img/game19.jpg" class="card-img-top" alt="SILENT HILL 2" />
+                <div class="game-card-body">
+                  <h5 class="game-title">SILENT HILL 2</h5>
+                  <p class="game-price">$296,000 COP</p>
+                  <button class="btn btn-success add-to-cart">Agregar al Carrito</button>
+                </div>
               </div>
             </div>
-          </div>
-        </div>
 
-        <div class="row justify-content-center mt-4">
-          <div class="col-md-3">
-            <div
-              class="game-card product"
-              data-id="17"
-              data-name="Resident Evil 4"
-              data-price="114900"
-            >
-              <img src="img/game17.jpg" class="card-img-top" alt="Juego 17" />
-              <div class="game-card-body">
-                <h5 class="game-title">Resident Evil 4</h5>
-                <p class="game-price">$114,900 COP <del>$229,000 COP</del></p>
-                <button class="btn btn-success add-to-cart">Agregar al Carrito</button>
+            <div class="col-md-3">
+              <div id="juego-nier-automata" class="game-card product" data-id="15" data-name="NieR:Automata" data-price="124000">
+                <img src="img/game15.jpg" class="card-img-top" alt="NieR:Automata" />
+                <div class="game-card-body">
+                  <h5 class="game-title">NieR:Automata</h5>
+                  <p class="game-price">$124,000 COP</p>
+                  <button class="btn btn-success add-to-cart">Agregar al Carrito</button>
+                </div>
               </div>
             </div>
           </div>
+      
+          <div class="row justify-content-center mt-4">
 
-          <div class="col-md-3">
-            <div
-              class="game-card product"
-              data-id="18"
-              data-name="Resident Evil Village"
-              data-price="112000"
-            >
-              <img src="img/game18.jpg" class="card-img-top" alt="Juego 18" />
-              <div class="game-card-body">
-                <h5 class="game-title">Resident Evil Village</h5>
-                <p class="game-price">$112,000 COP</p>
-                <button class="btn btn-success add-to-cart">Agregar al Carrito</button>
+            <div class="col-md-3">
+              <div id="juego-need-for-speed" class="game-card product" data-id="14" data-name="Need for Speed Unbound" data-price="279900">
+                <img src="img/game14.jpg" class="card-img-top" alt="Need for Speed Unbound" />
+                <div class="game-card-body">
+                  <h5 class="game-title">Need for Speed Unbound</h5>
+                  <p class="game-price">$279,900 COP</p>
+                  <button class="btn btn-success add-to-cart">Agregar al Carrito</button>
+                </div>
               </div>
             </div>
-          </div>
 
-          <div class="col-md-3">
-            <div
-              class="game-card product"
-              data-id="19"
-              data-name="SILENT HILL 2"
-              data-price="296000"
-            >
-              <img src="img/game19.jpg" class="card-img-top" alt="Juego 19" />
-              <div class="game-card-body">
-                <h5 class="game-title">SILENT HILL 2</h5>
-                <p class="game-price">$296,000 COP</p>
-                <button class="btn btn-success add-to-cart">Agregar al Carrito</button>
+            <div class="col-md-3">
+              <div id="juego-spider-man-remastered" class="game-card product" data-id="12" data-name="Marvel’s Spider-Man Remastered" data-price="219000">
+                <img src="img/game12.jpg" class="card-img-top" alt="Marvel’s Spider-Man Remastered" />
+                <div class="game-card-body">
+                  <h5 class="game-title">Marvel’s Spider-Man Remastered</h5>
+                  <p class="game-price">$219,000 COP</p>
+                  <button class="btn btn-success add-to-cart">Agregar al Carrito</button>
+                </div>
               </div>
             </div>
-          </div>
 
-          <div class="col-md-3">
-            <div
-              class="game-card product"
-              data-id="20"
-              data-name="The Last of Us Part I"
-              data-price="130900"
-            >
-              <img src="img/game20.jpg" class="card-img-top" alt="Juego 20" />
-              <div class="game-card-body">
-                <h5 class="game-title">The Last of Us Part I</h5>
-                <p class="game-price">$130,900 COP <del>$219,000 COP</del></p>
-                <button class="btn btn-success add-to-cart">Agregar al Carrito</button>
+            <div class="col-md-3">
+              <div id="juego-hollow-knight" class="game-card product" data-id="9" data-name="Hollow Knight" data-price="37500">
+                <img src="img/game9.jpg" class="card-img-top" alt="Hollow Knight" />
+                <div class="game-card-body">
+                  <h5 class="game-title">Hollow Knight</h5>
+                  <p class="game-price">$37,500 COP</p>
+                  <button class="btn btn-success add-to-cart">Agregar al Carrito</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-3">
+              <div id="juego-village-gold" class="game-card product" data-id="26" data-name="Village Gold Edition" data-price="135500">
+                <img src="img/skin2.jpg" class="card-img-top" alt="Village Gold Edition" />
+                <div class="game-card-body">
+                  <h5 class="game-title">Village Gold Edition</h5>
+                  <p class="game-price">$135,500 COP</p>
+                  <button class="btn btn-success add-to-cart">Agregar al Carrito</button>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
+      </div>      
 
       <section id="complementos" class="mt-5">
         <h2 class="section-title">Complementos</h2>

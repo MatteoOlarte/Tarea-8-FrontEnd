@@ -1,27 +1,83 @@
-// Función para simular la suscripción
-function suscribirse() {
-	alert("Te has suscrito al plan mensual de eShop.");
-	document.getElementById("recibo-texto").classList.remove("d-none");
-	actualizarPerfil();
+"use strict";
+import { APIurl } from "../utils/urls.js";
+
+function main() {
+	console.log("sexo");
+	const token = sessionStorage.getItem("access_token");
+
+	if (!token) {
+		location.href = "./login.html";
+		return;
+	}
+
+	// Evento para suscribirse
+	document.getElementById("btnSuscribirse").addEventListener("click", () => {
+		suscribirse(token);
+	});
+
+	// Evento para gestionar la suscripción (terminar la suscripción)
+	document.getElementById("btnGestionarSuscripcion").addEventListener("click", () => {
+		gestionarSuscripcion(token);
+	});
 }
 
-// Función para gestionar la suscripción
-function gestionarSuscripcion() {
-	alert("Redirigiendo a la página de gestión de suscripción.");
+async function suscribirse(token) {
+	let params = new URLSearchParams();
+	params.append("subscription", true);
+
+	try {
+		let response = await fetch(`${APIurl}/auth?${params}`, {
+			method: "PATCH",
+			headers: {
+				Authorization: `Bearer ${token}`,
+				"Content-Type": "application/json",
+			},
+		});
+		if (response.ok) {
+			let data = await response.json();
+
+			// Mostrar el recibo generado
+			document.querySelector("#recibo-texto").classList.remove("d-none");
+			document.querySelector(
+				"#recibo-texto"
+			).innerText = `Gracias por suscribirte al plan mensual. Tu recibo ha sido generado con el número de factura: ${data.email}`;
+		} else {
+			if (response.status == 401) {
+				location.href = "./login.html";
+				return;
+			}
+		}
+	} catch (error) {
+		location.href = "./login.html";
+		return;
+	}
 }
 
-// Función para ver el historial de pagos
-function verHistorialPagos() {
-	alert("Redirigiendo al historial de pagos.");
+async function gestionarSuscripcion(token) {
+	let params = new URLSearchParams();
+	params.append("subscription", false);
+
+	try {
+		let response = await fetch(`${APIurl}/auth?${params}`, {
+			method: "PATCH",
+			headers: {
+				Authorization: `Bearer ${token}`,
+				"Content-Type": "application/json",
+			},
+		});
+		if (response.ok) {
+			let data = await response.json();
+			//hacer algo cuando se ponga inactiva
+		} else {
+			if (response.status == 401) {
+				location.href = "./login.html";
+				return;
+			}
+		}
+	} catch (error) {
+		location.href = "./login.html";
+		return;
+	}
 }
 
-// Función para actualizar el perfil del usuario
-function actualizarPerfil() {
-	// Aquí se actualizaría el estado del perfil del usuario para reflejar la suscripción activa.
-	console.log("Perfil actualizado: Suscripción activa.");
-}
-
-// Eventos para los botones de la página
-document.getElementById("btnSuscribirse").addEventListener("click", suscribirse);
-document.getElementById("btnGestionarSuscripcion").addEventListener("click", gestionarSuscripcion);
-document.getElementById("btnVerHistorialPagos").addEventListener("click", verHistorialPagos);
+main();

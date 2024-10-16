@@ -1,5 +1,5 @@
 "use strict";
-const APIurl = "https://webapp-eastus-programacionweb-2024-2-gafjg4acc2csdggn.eastus-01.azurewebsites.net";
+import { APIurl } from "../utils/urls.js";
 let fullNameLabel = document.getElementById("fullName");
 let emailLabel = document.getElementById("email");
 let usernameLabel = document.getElementById("username");
@@ -37,20 +37,32 @@ async function fetchUserProfile(token) {
 
 		if (response.ok) {
 			let userData = await response.json();
-			let photoURL = userData.photo ?? "https://via.placeholder.com/150";
+			let photoURL = userData.photo_url ?? "https://via.placeholder.com/150";
 
+			document.querySelector("#profile-name-info").classList.remove("d-none")
+			document.querySelector("#profile-name-spiner").classList.add("d-none")
 			fullNameLabel.textContent = `${userData.fname} ${userData.lname}`;
       emailLabel.textContent = userData.email;
       usernameLabel.textContent = `@${userData.fname}${userData.lname}`;
-      phoneNumberLabel.textContent = userData.phone ?? "...";
+      phoneNumberLabel.textContent = userData.phone_number ?? "...";
       usernameLabel2.textContent = `@${userData.fname}${userData.lname}`;
       userCCMain.textContent = userData.cc;
       userProfilePhoto.setAttribute("src", photoURL);
+
+			if (userData.has_subscription) {
+				document.querySelector("#subscription-badage").classList.add("text-bg-success")
+				document.querySelector("#subscription-badage").textContent = "Estado de suscripcion: Activa"
+			} else {
+				document.querySelector("#subscription-badage").classList.add("text-bg-danger")
+				document.querySelector("#subscription-badage").textContent = "Estado de suscripcion: Inactiva"
+			}
 		} else {
-			location.href = "./login.html";
+			if (response.status == 401) {
+				location.href = "./login.html";
+			}
 		}
 	} catch (error) {
-    location.href = "./login.html";
+    //location.href = "./login.html";
 		console.log(error);
 	}
 }

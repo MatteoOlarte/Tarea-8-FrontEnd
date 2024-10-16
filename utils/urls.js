@@ -1,0 +1,1 @@
+export const APIurl = "https://webapp-eastus-programacionweb-2024-2-gafjg4acc2csdggn.eastus-01.azurewebsites.net";
